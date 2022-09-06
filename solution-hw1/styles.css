@@ -24,7 +24,7 @@ body {
 }
 
 .center {
-    width:fit-content;
+    width: fit-content;
     margin: auto;
     padding: 5px;
     margin-bottom: 40px;
@@ -136,4 +136,18 @@ hr {
 
 p {
     color: black;
+}
+
+#underline {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: -15px;
+}
+
+#underL {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: 10px;
 }
