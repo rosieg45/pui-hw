@@ -1,2 +1,2 @@
 Deployed website: 
-Repository link: 
+Repository link: https://interactive-structures.org/teach-pui-example/
