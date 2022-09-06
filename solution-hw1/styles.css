@@ -133,3 +133,7 @@ hr {
     display: inline-block; 
     text-align: left;
 }
+
+p {
+    color: black;
+}
