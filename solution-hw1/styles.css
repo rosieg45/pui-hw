@@ -39,6 +39,7 @@ body {
 
 .border {
     border: 3px solid black;
+    margin: 0px auto 0px auto;
 
 }
 .price {
