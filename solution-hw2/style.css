@@ -1,0 +1,179 @@
+body {
+    font-family: Sans-Serif;
+    text-align: center;
+}
+
+#logo {
+    margin-top: 30px;
+}
+
+.high{
+    width: 200px;
+    margin: auto;
+}
+
+.center:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.title {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+}
+
+.center {
+    width: fit-content;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    justify-content: center;
+} 
+
+.name {
+    margin-top: -10px;
+    margin-bottom: -20px;
+    text-align: left;
+}
+
+.border {
+    border: 3px solid black;
+    margin: 0px auto 0px auto;
+
+}
+.price {
+    margin-top: -10px;
+}
+
+#yellow{
+    border: 3px solid black;
+    background-color: yellow;
+    padding: 5px 15px;
+}
+
+#thick {
+    border: none;
+    height: 5px;
+}
+
+.drop {
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+
+.cartG {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+#checkout {
+    padding: 10px;
+}
+
+#bLine {
+    border: none;
+    height: 3px;
+    width: 40%;
+}
+
+.closer {
+    line-height: 1.5;
+}
+
+.select {
+    width: 200px;
+    border: 2px solid black;
+}
+
+.down {
+    margin-bottom: 5px;
+}
+
+#pad {
+    padding-top: 30px;
+}
+
+#lineBox {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#next {
+    display: inline;
+    padding: 5px 21px;
+}
+
+#space {
+    margin-top: 30px;
+}
+
+hr {
+    background-color: black;
+    flex: 1 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    display: flex;
+}
+
+.right-links {
+    float: right;
+    width: 20%;
+}
+
+.head {
+    display: flex;
+}
+
+.left {
+    text-align: left;
+}
+
+#main {
+    text-align: center;
+}
+
+#child {
+    display: inline-block; 
+    text-align: left;
+}
+
+p {
+    color: black;
+}
+
+#underline {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: -15px;
+}
+
+#underL {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: 10px;
+}
+
+a:visited {  
+    color: black;  
+}
