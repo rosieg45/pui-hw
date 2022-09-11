@@ -1,6 +1,8 @@
 body {
     font-family: Sans-Serif;
     text-align: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 #logo {
@@ -18,15 +20,20 @@ body {
     font-weight: bold;
 }
 
-.title {
-    margin-top: 70px;
-    margin-bottom: 40px;
+#title {
     font-weight: normal;
-    flex-grow: 1;
+}
+
+#pg {
+    display: flex;
+    align-items: flex-start;
 }
 
 .container {
     display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .center {
@@ -35,7 +42,6 @@ body {
     padding: 5px;
     margin-bottom: 40px;
     cursor: pointer;
-    justify-content: center;
 } 
 
 .name {
@@ -47,6 +53,7 @@ body {
 .border {
     border: 3px solid black;
     margin: 0px auto 0px auto;
+    width: 300px;
 
 }
 .price {
@@ -57,11 +64,6 @@ body {
     border: 3px solid black;
     background-color: yellow;
     padding: 5px 15px;
-}
-
-#thick {
-    border: none;
-    height: 5px;
 }
 
 .drop {
@@ -120,37 +122,51 @@ body {
     margin-top: 30px;
 }
 
-hr {
+/* hr {
     background-color: black;
     flex: 1 0 auto;
-}
+} */
 
 .link {
     text-decoration: none;
     display: inline-block;
     text-align: center;
     padding: 30px;
+    font-size: 25px;
 }
 
 nav {
     display: flex;
+    justify-content: flex-end;
+    margin-right: 65px;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
-.right-links {
-    float: right;
-    width: 20%;
+#line {
+    border-bottom: 5px solid black;
 }
 
-.head {
+header {
+    width: 1200px;
+    height: 250px;
+    text-align: center;
     display: flex;
-    align-items: center;
-}
-.right {
-    flex: 1 0 auto;
+    margin-bottom: 80px;
 }
 
-.left {
+
+#right {
+    display: flex;
     flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#left {
+    text-align: left;
+    margin: 0 38px 22px 38px;
+    padding: 20px 0 20px 0;
 }
 
 #main {
@@ -182,4 +198,10 @@ p {
 
 a:visited {  
     color: black;  
+}
+
+
+h1 {
+    font-weight: 300;
+    font-size: 34px;
 }
