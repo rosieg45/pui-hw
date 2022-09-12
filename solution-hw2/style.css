@@ -1,6 +1,6 @@
 body {
     font-family: Sans-Serif;
-    text-align: center;
+    display: block;
     max-width: 1200px;
     margin: auto;
 }
@@ -32,30 +32,40 @@ body {
 .container {
     display: flex;
     max-width: 1100px;
+    flex-direction: row;
     margin: auto;
     justify-content: space-between;
+    align-content: flex-start;
 }
 
 .center {
-    width: fit-content;
-    margin: auto;
-    padding: 5px;
-    margin-bottom: 40px;
+    width: max-content;
+    margin: auto auto 40px auto;
+    padding: 10px 10px 0 10px;
     cursor: pointer;
+    align-items: top;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    height: 400px;
 } 
 
 .name {
-    margin-top: -10px;
-    margin-bottom: -20px;
     text-align: left;
 }
 
 .border {
     border: 3px solid black;
-    margin: 0px auto 0px auto;
+    margin: auto;
     width: 300px;
-
 }
+
+#image {
+    border: 3px solid black;
+    margin: auto;
+    width: 650px;
+}
+
 .price {
     margin-top: -10px;
 }
@@ -105,7 +115,13 @@ body {
 }
 
 #pad {
-    padding-top: 30px;
+    text-align: left;
+    margin: 0 38px 22px 38px;
+    padding: 30px 0 30px 0;
+}
+
+#outside {
+    display: flex;
 }
 
 #lineBox {
@@ -133,6 +149,7 @@ body {
     text-align: center;
     padding: 30px;
     font-size: 25px;
+    color: black;
 }
 
 nav {
@@ -170,7 +187,9 @@ header {
 }
 
 #main {
-    text-align: center;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
 }
 
 #child {
@@ -180,6 +199,7 @@ header {
 
 p {
     color: black;
+    font-size: 24px;
 }
 
 #underline {
@@ -200,8 +220,18 @@ a:visited {
     color: black;  
 }
 
+#last {
+    display: flex;
+    margin-top: 100px;
+}
+
+#des {
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+
 
 h1 {
     font-weight: 300;
-    font-size: 34px;
+    font-size: 30px;
 }
