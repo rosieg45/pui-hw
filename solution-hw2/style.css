@@ -27,6 +27,7 @@ body {
 #pg {
     display: flex;
     align-items: flex-start;
+    margin-top: 50px;
 }
 
 .container {
@@ -70,44 +71,78 @@ body {
     margin-top: -10px;
 }
 
-#yellow{
+.yellow{
     border: 3px solid black;
     background-color: yellow;
-    padding: 5px 15px;
+    padding: 10px 32px;
+    font-size: 20px;
 }
 
 .drop {
     margin-top: 30px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 .cartG {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 40px;
-    text-align: center;
+    text-align: left;
 }
 
-.bottom {
+#bottom {
     margin-top: 20px;
+    margin-left: 50px;
+    text-align: right;
+}
+
+#cheap {
+    margin-top: 50px;
+}
+
+#expensive {
+    margin-top: 180px;
 }
 
 #checkout {
     padding: 10px;
 }
 
-#bLine {
-    border: none;
-    height: 3px;
-    width: 40%;
+#Bline {
+    border-bottom: 5px solid black;
+    margin-left: 475px;
 }
 
 .closer {
+    display: flex;
     line-height: 1.5;
 }
 
+#rollone {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
+#rolltwo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 105px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
 .select {
-    width: 200px;
+    width: 320px;
     border: 2px solid black;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+form {
+    width: 320px;
 }
 
 .down {
@@ -116,8 +151,8 @@ body {
 
 #pad {
     text-align: left;
-    margin: 0 38px 22px 38px;
-    padding: 30px 0 30px 0;
+    margin: 0 80px 0 80px;
+    padding: 30px 0 0 0;
 }
 
 #outside {
@@ -130,26 +165,33 @@ body {
 }
 
 #next {
-    display: inline;
-    padding: 5px 21px;
+    display: flex;
+    padding: 12px 45px 10px 45px;
+    font-size: 20px;
 }
 
 #space {
     margin-top: 30px;
+    width: 150px;
 }
 
-/* hr {
-    background-color: black;
-    flex: 1 0 auto;
-} */
+#cartpic {
+    width: 150px;
+}
 
 .link {
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    padding: 30px;
     font-size: 25px;
     color: black;
+}
+
+#cart {
+    margin: 30px 5px 30px 90px;
+}
+#products {
+    margin: 30px 5px 30px 40px;
 }
 
 nav {
@@ -169,7 +211,7 @@ header {
     height: 250px;
     text-align: center;
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 
@@ -195,6 +237,7 @@ header {
 #child {
     display: inline-block; 
     text-align: left;
+    margin-top: 30px;
 }
 
 p {
@@ -206,14 +249,14 @@ p {
     font-size: 12px;
     text-decoration: underline;
     color: black;
-    margin-top: -15px;
+    margin-top: 2px;
 }
 
 #underL {
     font-size: 12px;
     text-decoration: underline;
     color: black;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 a:visited {  
@@ -227,11 +270,36 @@ a:visited {
 
 #des {
     margin-bottom: 60px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
 h1 {
     font-weight: 300;
-    font-size: 30px;
+    font-size: 38px;
+}
+
+#outer {
+    display: flex;
+    margin-left: 475px;
+}
+
+#firstcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+#lastrow {
+    display: flex;
+    flex-direction: row;
+    margin-left: 655px;
+    margin-bottom: 30px;
+}
+
+#totalprice {
+    margin-left: 350px;
+}
+
+#checkoutb {
+    margin-left: 980px;
 }
