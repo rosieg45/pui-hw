@@ -80,11 +80,12 @@ body {
 }
 
 /* buttons */
-#yellow{
+#yellowCart{
     border: 3px solid black;
     background-color: yellow;
     padding: 10px 40px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .yellow{
@@ -191,6 +192,7 @@ form {
     display: flex;
     padding: 12px 36px 10px 36px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #space {

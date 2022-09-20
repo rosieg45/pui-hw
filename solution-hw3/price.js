@@ -35,5 +35,5 @@ function packChange(element) {
 }
 
 let basePrice = 2.49;
-let glazingPrice = ;
-let packPrice = ;
+let glazingPrice = 0;
+let packPrice = 0;
