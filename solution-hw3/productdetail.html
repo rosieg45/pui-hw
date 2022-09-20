@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="price.js"></script>
+    <title>Product Detail</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div id="left">
+        <a href="../solution-hw2/index.html"><img src="../solution-hw2/assets/logo-01.svg" alt="Logo" width="400"></a>
+      </div>
+      
+      <div id="right">
+        <nav>
+          <a href="../solution-hw2/index.html" class="link" id="products"><mark><b>PRODUCTS</b></mark></a>
+          <a href="../solution-hw2/cart.html" class="link" id="cart">CART</a>
+        </nav>
+
+        <div id="line"></div>
+
+        <div id="pg">
+          <h1 class="title">Original cinnamon roll</h1>
+        </div>
+      </div>
+
+    </header>
+
+    <div id="outside">
+        <div id="pad">
+            <img id="image" src="../solution-hw2/assets/original-cinnamon-roll.jpeg" alt="Original cinnamon roll">
+        </div>
+      
+        <div id="main">
+            <div id="child">
+                <p id="des">Customize our delicious,<br>
+                hand-made cinnamon roll to<br> 
+                your liking!</p>
+    
+                <div class="drop">
+                    <p class="down">Glazing:</p>
+                    <form>
+                    <select class="select" id="glazingOptions" onchange="glazingChange(this)">                      >
+                        <option value="Keep original">Keep original</option>
+                        <option value="Sugar milk">Sugar milk</option>
+                        <option value="Vanilla milk">Vanilla milk</option>
+                        <option value="Double chocolate">Double chocolate</option>
+                    </select>
+                    </form>
+                </div>
+        
+                <div class="drop">
+                  <p class="down">Pack size:</p>
+                    <form>
+                        <select class="select" onchange="packChange(this)">
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        </select>
+                    </form>
+                </div>
+    
+            </div>
+            
+            <div id="last">
+                <div id="next"><b>$2.49</b></div>
+                <button id="yellow" type="button"><b>Add to Cart</b></button>
+            </div>
+    
+        </div>
+    </div>
+  </body>
+</html>

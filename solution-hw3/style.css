@@ -1,0 +1,339 @@
+body {
+    font-family: Sans-Serif;
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#logo {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.high{
+    width: 200px;
+    margin: auto;
+}
+
+/* products */
+.center:hover {
+    background-color: yellow;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+/* page title */
+#title {
+    font-weight: normal;
+}
+
+#pg {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+/* first row of products on product gallery page */
+.container {
+    display: flex;
+    max-width: 1100px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+/* products */
+.center {
+    width: max-content;
+    margin: auto auto 40px auto;
+    padding: 10px 10px 0 10px;
+    cursor: pointer;
+    align-items: top;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    height: 400px;
+    padding-bottom: 30px;
+} 
+
+.name {
+    text-align: left;
+}
+
+.border {
+    border: 3px solid black;
+    margin: auto;
+    width: 300px;
+}
+
+#image {
+    border: 3px solid black;
+    margin: auto;
+    width: 650px;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.price {
+    margin-top: -10px;
+}
+
+/* buttons */
+#yellow{
+    border: 3px solid black;
+    background-color: yellow;
+    padding: 10px 40px;
+    font-size: 20px;
+}
+
+.yellow{
+    border: 3px solid black;
+    background-color: yellow;
+    padding: 10px 40px;
+    font-size: 20px;
+}
+
+.drop {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cartG {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* column of prices */
+#bottom {
+    margin-top: 20px;
+    margin-left: 50px;
+    text-align: right;
+}
+
+/* original cinnamon roll price */
+#cheap {
+    margin-top: 50px;
+}
+
+/* double chocolate cinnamon roll price */
+#expensive {
+    margin-top: 180px;
+}
+
+#checkout {
+    padding: 10px;
+}
+
+/* horizontal line */
+#Bline {
+    border-bottom: 5px solid black;
+    margin-left: 475px;
+}
+
+.closer {
+    display: flex;
+    line-height: 1.5;
+}
+
+/* original cinnamon roll group */
+#rollone {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
+/* double chocolate cinnamon roll */
+#rolltwo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 105px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
+.select {
+    width: 320px;
+    border: 2px solid black;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+form {
+    width: 320px;
+}
+
+.down {
+    margin-bottom: 5px;
+}
+
+#pad {
+    text-align: left;
+    margin: 0 80px 0 80px;
+    padding: 30px 0 0 0;
+}
+
+#outside {
+    display: flex;
+}
+
+#lineBox {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* price next to add to cart button */
+#next {
+    display: flex;
+    padding: 12px 36px 10px 36px;
+    font-size: 20px;
+}
+
+#space {
+    margin-top: 30px;
+    width: 150px;
+}
+
+#cartpic {
+    width: 150px;
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
+#cart {
+    margin: 30px 5px 30px 90px;
+}
+#products {
+    margin: 30px 5px 30px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 65px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+#line {
+    border-bottom: 5px solid black;
+}
+
+header {
+    width: 1200px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+/* nav and page title */
+#right {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#left {
+    text-align: left;
+    margin: 0 38px 22px 38px;
+    padding: 20px 0 20px 0;
+}
+
+/* content on right side of original cinnamon roll */
+#main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+/* content above price and add to price button */
+#child {
+    display: inline-block; 
+    text-align: left;
+    margin-top: 30px;
+}
+
+p {
+    color: black;
+    font-size: 24px;
+}
+
+/* remove link */
+#underline {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: 2px;
+    top: -10px;
+    position: relative;
+}
+
+#underL {
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    margin-top: 2px;
+    top: -10px;
+    position: relative;
+}
+
+/* Changing link color to black */
+a:visited {  
+    color: black;  
+}
+
+#last {
+    display: flex;
+    margin-top: 100px;
+}
+
+/* description of original cinnamon roll */
+#des {
+    margin-bottom: 60px;
+    font-size: 26px;
+}
+
+
+h1 {
+    font-weight: 300;
+    font-size: 38px;
+}
+
+#outer {
+    display: flex;
+    margin-left: 475px;
+}
+
+/* product images in cart */
+#firstcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+#lastrow {
+    display: flex;
+    flex-direction: row;
+    margin-left: 655px;
+    margin-bottom: 30px;
+}
+
+#totalprice {
+    margin-left: 350px;
+}
+
+#checkoutb {
+    margin-left: 970px;
+    margin-bottom: 50px;
+}
