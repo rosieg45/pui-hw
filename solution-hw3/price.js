@@ -1,3 +1,7 @@
+let basePrice = 2.49;
+let glazingPrice = 0;
+let packPrice = 0;
+
 function glazingChange(element) {
     const priceChange = element.value;
     console.log(priceChange);
@@ -10,7 +14,7 @@ function glazingChange(element) {
     } else if ("Double chocolate" === priceChange) {
       glazingPrice = 1.50;
     }
-    updatePrice()
+    updatePrice();
   }
 
 function updatePrice() {
@@ -31,9 +35,5 @@ function packChange(element) {
   } else if ("12" === pack) {
     packPrice = 10;
   }
-  updatePrice()
+  updatePrice();
 }
-
-let basePrice = 2.49;
-let glazingPrice = 0;
-let packPrice = 0;
