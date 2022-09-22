@@ -17,12 +17,6 @@ function updatePrice() {
 }
 
 //Glazing dropdown
-glazeOpObj1 = {glazingOptions: "Keep original", priceAdapt: 0};
-glazeOpObj2 = {glazingOptions: "Sugar milk", priceAdapt: 0};
-glazeOpObj3 = {glazingOptions: "Vanilla milk", priceAdapt: 0.50};
-glazeOpObj4 = {glazingOptions: "Double chocolate", priceAdapt: 1.50};
-listGlazeObj = [glazeOpObj1, glazeOpObj2, glazeOpObj3, glazeOpObj4];
-
 let select = document.getElementById("glazingOptions");
 
 let glazeOp1 = document.createElement("option");
@@ -42,6 +36,12 @@ glazeOp4.innerHTML = "Double chocolate";
 select.appendChild(glazeOp4);
 
 //Changing glaze
+let glazeOpObj1 = {glazingOptions: "Keep original", priceAdapt: 0.00};
+let glazeOpObj2 = {glazingOptions: "Sugar milk", priceAdapt: 0.00};
+let glazeOpObj3 = {glazingOptions: "Vanilla milk", priceAdapt: 0.50};
+let glazeOpObj4 = {glazingOptions: "Double chocolate", priceAdapt: 1.50};
+const listGlazeObj = [glazeOpObj1, glazeOpObj2, glazeOpObj3, glazeOpObj4];
+
 function glazingChange(element) {
   console.log("in glaze change");
 
@@ -49,8 +49,8 @@ function glazingChange(element) {
     console.log(priceChange);
 
     listGlazeObj.forEach(function (obj) {
-      console.log("in pack change LOOP");
-      if (glaze === obj.glazingOptions){
+      console.log("in price change LOOP");
+      if (priceChange === obj.glazingOptions){
       glazingPrice = obj.priceAdapt;
       console.log("obj=",obj); 
       }
@@ -59,12 +59,6 @@ function glazingChange(element) {
 }
 
 //Price dropdown
-packSizeObj1 = {size: "1", priceAdap: 1};
-packSizeObj2 = {size: "6", priceAdap: 5};
-packSizeObj3 = {size: "3", priceAdap: 3};
-packSizeObj4 = {size: "12", priceAdap: 10};
-listObj = [packSizeObj1, packSizeObj2, packSizeObj3, packSizeObj4];
-
 let price = document.getElementById("packSizes");
 
 let packSize1 = document.createElement("option");
@@ -84,6 +78,12 @@ packSize4.innerHTML = "12";
 price.appendChild(packSize4);
 
 //Changing price
+let packSizeObj1 = {size: "1", priceAdap: 1};
+let packSizeObj2 = {size: "6", priceAdap: 5};
+let packSizeObj3 = {size: "3", priceAdap: 3};
+let packSizeObj4 = {size: "12", priceAdap: 10};
+const listObj = [packSizeObj1, packSizeObj2, packSizeObj3, packSizeObj4];
+
 function packChange(element) { 
   console.log("in pack change");
 
