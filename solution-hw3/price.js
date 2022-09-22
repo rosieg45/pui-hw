@@ -3,6 +3,12 @@ let glazingPrice = 0;
 let packPrice = 0;
 
 // glazing dropdown
+glazeOpObj1 = {glazingOptions: "Keep original", priceAdapt: 0};
+glazeOpObj2 = {glazingOptions: "Sugar milk", priceAdapt: 0};
+glazeOpObj3 = {glazingOptions: "Vanilla milk", priceAdapt: 0.50};
+glazeOpObj4 = {glazingOptions: "Double chocolate", priceAdapt: 1.50};
+listGlazeObj = [glazeOpObj1, glazeOpObj2, glazeOpObj3, glazeOpObj4];
+
 let select = document.getElementById("glazingOptions");
 
 let glazeOp1 = document.createElement("option");
@@ -52,15 +58,22 @@ function glazingChange(element) {
 
     const priceChange = element.value;
     console.log(priceChange);
-    if ("Keep original" === priceChange) {
-      glazingPrice = 0;
-    } else if ("Vanilla milk" === priceChange) {
-      glazingPrice = .50;
-    } else if ("Sugar milk" === priceChange) {
-      glazingPrice = 0;
-    } else if ("Double chocolate" === priceChange) {
-      glazingPrice = 1.50;
-    }
+    // if ("Keep original" === priceChange) {
+    //   glazingPrice = 0;
+    // } else if ("Vanilla milk" === priceChange) {
+    //   glazingPrice = .50;
+    // } else if ("Sugar milk" === priceChange) {
+    //   glazingPrice = 0;
+    // } else if ("Double chocolate" === priceChange) {
+    //   glazingPrice = 1.50;
+    // }
+    listGlazeObj.forEach(function (obj) {
+      console.log("in pack change LOOP");
+      if (glaze === obj.glazingOptions){
+      glazingPrice = obj.priceAdapt;
+      console.log("obj=",obj); 
+      }
+    });
     updatePrice();
   }
 
