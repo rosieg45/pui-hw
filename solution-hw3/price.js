@@ -41,6 +41,23 @@ let glazeOp4 = document.createElement("option");
 glazeOp4.innerHTML = "Double chocolate";
 select.appendChild(glazeOp4);
 
+//Changing glaze
+function glazingChange(element) {
+  console.log("in glaze change");
+
+    const priceChange = element.value;
+    console.log(priceChange);
+
+    listGlazeObj.forEach(function (obj) {
+      console.log("in pack change LOOP");
+      if (glaze === obj.glazingOptions){
+      glazingPrice = obj.priceAdapt;
+      console.log("obj=",obj); 
+      }
+    });
+  updatePrice();
+}
+
 //Price dropdown
 packSizeObj1 = {size: "1", priceAdap: 1};
 packSizeObj2 = {size: "6", priceAdap: 5};
@@ -65,24 +82,6 @@ price.appendChild(packSize3);
 let packSize4 = document.createElement("option");
 packSize4.innerHTML = "12";
 price.appendChild(packSize4);
-
-//Changing glaze
-function glazingChange(element) {
-  console.log("in glaze change");
-
-    const priceChange = element.value;
-    console.log(priceChange);
-
-    listGlazeObj.forEach(function (obj) {
-      console.log("in pack change LOOP");
-      if (glaze === obj.glazingOptions){
-      glazingPrice = obj.priceAdapt;
-      console.log("obj=",obj); 
-      }
-    });
-  updatePrice();
-}
-
 
 //Changing price
 function packChange(element) { 
