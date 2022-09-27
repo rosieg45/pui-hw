@@ -101,3 +101,71 @@ function packChange(element) {
   updatePrice();
 }
 
+const queryString = window.location.search;
+  const params = new URLSearchParams(queryString);
+  const rollType = params.get('rolls');
+
+  const rollBasePrice = rolls[rollType].basePrice;
+  const rollImageURL = rolls[rollType].imageFile;
+
+//for updating page details
+ 
+// update title in html
+let titleElement = document.getElementById('title');
+titleElement.innerHTML = rollType + " Cinnamon Roll";
+
+// update header in html
+let headerElement = document.getElementById('heading');
+headerElement.innerHTML = rollType + " Cinnamon Roll";
+
+// update image in html
+let imageElement = document.getElementById('image');
+imageElement.src = '../solution-hw4/assets/products/' + rollImage;
+
+// update price in html
+let priceElement = document.getElementById('total-price-detail');
+priceElement.innerHTML = "$" + rollPrice;
+
+function updateDetails() {
+    const pagePrice = document.querySelector('#specific-item-price');
+    const pageIMG = document.querySelector('#specific-product-img');
+    const pageTitle = document.querySelector('.specific-roll-name');
+
+    pageTitle.innerText = rollType;
+    pagePrice.innerText = rollBasePrice;
+    pageIMG.src = rollImageURL;
+}
+
+updateDetails();
+
+//create empty array
+let cart = [];
+
+//for updating Cart page
+class Roll {
+    type;
+    glazing;
+    size;
+    basePrice;
+
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+function updateCart() {
+    const newRoll = new Roll(rollType, glazing.options,packSize.options,basePrice)
+    cart.push(newRoll);
+    console.log(cart);
+}
+
+//grabbing the button
+const addButton = document.querySelector('#button');
+
+addButton.onclick = updateCart;
+
+//Change value of each option to index of it, basically use index for option 
+
