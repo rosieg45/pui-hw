@@ -140,7 +140,6 @@ class Roll {
   }
 }
 
-
 function addToCart() {
   let glazingDropDown = document.querySelector("#glazingOptions");
   console.log(glazingDropDown);
