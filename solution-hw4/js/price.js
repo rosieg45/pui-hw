@@ -2,7 +2,7 @@
 
 let basePrice = 2.49;
 let glazingPrice = 0;
-let packPrice = 0;
+let packPrice = 1;
 
 //Updating price 
 function updatePrice() {
@@ -117,16 +117,46 @@ const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
 const rollBasePrice = rolls[rollType].basePrice;
-const rollImagePath = "assets/"+rolls[rollType].imageFile;
+const rollImagePath = "assets/" + rolls[rollType].imageFile;
 const rollName = rollType + " cinnamon roll";
 console.log(rollBasePrice);
 console.log(rollImagePath);
 console.log(rollName);
 
+basePrice = rollBasePrice;
+
 document.querySelector("#pgHeading").innerText = rollName;
-document.querySelector("#next b").innerText = rollBasePrice;
+document.querySelector("#next b").innerText = "$" + rollBasePrice;
 document.querySelector("#image").src = rollImagePath;
 document.querySelector("#image").alt = rollName;
+
+
+class Roll {
+  constructor(rollType, rollGlazing, packSize, basePrice) {
+      this.type = rollType;
+      this.glazing =  rollGlazing;
+      this.size = packSize;
+      this.basePrice = basePrice;
+  }
+}
+
+
+function addToCart() {
+  let glazingDropDown = document.querySelector("#glazingOptions");
+  console.log(glazingDropDown);
+  console.log(glazingDropDown.value);
+
+  let packDropOptions = document.querySelector("#packOptions");
+  console.log(packDropOptions.value);
+  let newCin = new Roll(rollType, glazingDropDown.value, packDropOptions.value, basePrice);
+  cart.push(newCin);
+  console.log(cart)
+}
+
+let onClickB = document.querySelector("#AddtoCartB");
+onClickB.addEventListener("click", addToCart);
+
+
 
 
 
@@ -142,49 +172,3 @@ document.querySelector("#image").alt = rollName;
 
 
 
-
-// // update header
-// let headerElement = document.getElementById('header');
-// headerElement.innerHTML = rollType + " Cinnamon Roll";
-
-// // update image
-// let imageChange = document.getElementById('rollPic');
-// imageChange.src = 'assets/' + rollImagePath;
-
-// // update price
-// let priceElement = document.getElementById('next');
-// priceElement.innerHTML = "$" + rollBasePrice;
-
-// // updating Cart page
-// class Roll {
-//     type;
-//     glazing;
-//     size;
-//     basePrice;
-
-//     constructor(rollType, rollGlazing, packSize, basePrice) {
-//         this.type = rollType;
-//         this.glazing =  rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = basePrice;
-//     }
-// }
-
-// // function to update in cart
-// function updateCart() {
-
-//   // getting pack and glazing selections from dropdown menu
-//   let glazingDrop = document.getElementById('glazingOptions');
-//   let packDrop = document.getElementById('packOptions');
-
-//   // getting text from option that was selected
-//   let glazePick = glazingDrop.options[glazingDrop.selectedIndex].text;
-//   let packPick= packDrop.options[packDrop.selectedIndex].text;
-
-//   // create new roll with the current selections
-//   let newRoll = new Roll(rollType, glazePick, packPick, rollPrice);
-
-//   // adding to array cart
-//   cart.push(newRoll);
-//   console.log(cart);
-// }

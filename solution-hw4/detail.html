@@ -46,15 +46,15 @@
                 <div class="drop">
                     <p class="down">Glazing:</p>
                     <form>
-                    <select class="select" id="glazingOptions">
+                    <select class="select" id="glazingOptions" onchange="glazingChange(this)">
                     </select>
                     </form>
                 </div>
         
                 <div class="drop">
-                  <p class="down" id="packOptions">Pack size:</p>
+                  <p class="down">Pack size:</p>
                     <form>
-                        <select class="packDropDown">
+                        <select class="packDropDown" id="packOptions" onchange="packChange(this)">
                         </select>
                     </form>
                 </div>
@@ -63,7 +63,7 @@
             
             <div id="last">
                 <div id="next"><b>$2.49</b></div>
-                <button id="AddtoCartB" type="button"><b>Add to Cart</b></button>
+                <button id="AddtoCartB" type="button">Add to Cart</button>
             </div>
     
         </div>
