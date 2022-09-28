@@ -1,3 +1,5 @@
+/* HW 3 start */
+
 let basePrice = 2.49;
 let glazingPrice = 0;
 let packPrice = 0;
@@ -59,8 +61,8 @@ function glazingChange(element) {
 }
 
 //Price dropdown
-let price = document.getElementById("packSizes");
-
+let price = document.querySelector(".packDropDown");
+console.log(price);
 let packSize1 = document.createElement("option");
 packSize1.innerHTML = "1";
 price.appendChild(packSize1);
@@ -101,71 +103,88 @@ function packChange(element) {
   updatePrice();
 }
 
-const queryString = window.location.search;
-  const params = new URLSearchParams(queryString);
-  const rollType = params.get('rolls');
 
-  const rollBasePrice = rolls[rollType].basePrice;
-  const rollImageURL = rolls[rollType].imageFile;
 
-//for updating page details
- 
-// update title in html
-let titleElement = document.getElementById('title');
-titleElement.innerHTML = rollType + " Cinnamon Roll";
 
-// update header in html
-let headerElement = document.getElementById('heading');
-headerElement.innerHTML = rollType + " Cinnamon Roll";
+/* HW 4 start */
 
-// update image in html
-let imageElement = document.getElementById('image');
-imageElement.src = '../solution-hw4/assets/products/' + rollImage;
-
-// update price in html
-let priceElement = document.getElementById('total-price-detail');
-priceElement.innerHTML = "$" + rollPrice;
-
-function updateDetails() {
-    const pagePrice = document.querySelector('#specific-item-price');
-    const pageIMG = document.querySelector('#specific-product-img');
-    const pageTitle = document.querySelector('.specific-roll-name');
-
-    pageTitle.innerText = rollType;
-    pagePrice.innerText = rollBasePrice;
-    pageIMG.src = rollImageURL;
-}
-
-updateDetails();
-
-//create empty array
+// empty cart array
 let cart = [];
 
-//for updating Cart page
-class Roll {
-    type;
-    glazing;
-    size;
-    basePrice;
+// Parse the URL parameter and store the current roll type as a variable.
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');
 
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-}
+const rollBasePrice = rolls[rollType].basePrice;
+const rollImagePath = "assets/"+rolls[rollType].imageFile;
+const rollName = rollType + " cinnamon roll";
+console.log(rollBasePrice);
+console.log(rollImagePath);
+console.log(rollName);
 
-function updateCart() {
-    const newRoll = new Roll(rollType, glazing.options,packSize.options,basePrice)
-    cart.push(newRoll);
-    console.log(cart);
-}
+document.querySelector("#pgHeading").innerText = rollName;
+document.querySelector("#next b").innerText = rollBasePrice;
+document.querySelector("#image").src = rollImagePath;
+document.querySelector("#image").alt = rollName;
 
-//grabbing the button
-const addButton = document.querySelector('#button');
 
-addButton.onclick = updateCart;
 
-//Change value of each option to index of it, basically use index for option 
 
+
+ 
+
+
+
+
+
+
+
+
+
+
+// // update header
+// let headerElement = document.getElementById('header');
+// headerElement.innerHTML = rollType + " Cinnamon Roll";
+
+// // update image
+// let imageChange = document.getElementById('rollPic');
+// imageChange.src = 'assets/' + rollImagePath;
+
+// // update price
+// let priceElement = document.getElementById('next');
+// priceElement.innerHTML = "$" + rollBasePrice;
+
+// // updating Cart page
+// class Roll {
+//     type;
+//     glazing;
+//     size;
+//     basePrice;
+
+//     constructor(rollType, rollGlazing, packSize, basePrice) {
+//         this.type = rollType;
+//         this.glazing =  rollGlazing;
+//         this.size = packSize;
+//         this.basePrice = basePrice;
+//     }
+// }
+
+// // function to update in cart
+// function updateCart() {
+
+//   // getting pack and glazing selections from dropdown menu
+//   let glazingDrop = document.getElementById('glazingOptions');
+//   let packDrop = document.getElementById('packOptions');
+
+//   // getting text from option that was selected
+//   let glazePick = glazingDrop.options[glazingDrop.selectedIndex].text;
+//   let packPick= packDrop.options[packDrop.selectedIndex].text;
+
+//   // create new roll with the current selections
+//   let newRoll = new Roll(rollType, glazePick, packPick, rollPrice);
+
+//   // adding to array cart
+//   cart.push(newRoll);
+//   console.log(cart);
+// }

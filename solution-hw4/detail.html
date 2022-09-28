@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../solution-hw4/js/rollsData.js" defer></script>
+    <script src="../solution-hw4/js/price.js" defer></script>
+    <title id="pgTitle">Product Detail</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div id="left">
+        <a href="index.html"><img src="assets/logo-01.svg" alt="Logo" width="400"></a>
+      </div>
+      
+      <div id="right">
+        <nav>
+          <a href="index.html" class="link" id="products"><mark><b>PRODUCTS</b></mark></a>
+          <a href="cart.html" class="link" id="cart">CART</a>
+        </nav>
+
+        <div id="line"></div>
+
+        <div id="pg">
+          <h1 id="pgHeading">Original cinnamon roll</h1>
+        </div>
+      </div>
+
+    </header>
+
+    <div id="outside">
+        <div id="pad">
+            <img id="image" src="assets/original-cinnamon-roll.jpeg" alt="Original cinnamon roll">
+        </div>
+      
+        <div id="main">
+            <div id="child">
+                <p id="des">Customize our delicious,<br>
+                hand-made cinnamon roll to<br> 
+                your liking!</p>
+    
+                <div class="drop">
+                    <p class="down">Glazing:</p>
+                    <form>
+                    <select class="select" id="glazingOptions">
+                    </select>
+                    </form>
+                </div>
+        
+                <div class="drop">
+                  <p class="down" id="packOptions">Pack size:</p>
+                    <form>
+                        <select class="packDropDown">
+                        </select>
+                    </form>
+                </div>
+    
+            </div>
+            
+            <div id="last">
+                <div id="next"><b>$2.49</b></div>
+                <button id="AddtoCartB" type="button"><b>Add to Cart</b></button>
+            </div>
+    
+        </div>
+    </div>
+  </body>
+</html>
