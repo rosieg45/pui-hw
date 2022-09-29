@@ -4,7 +4,7 @@ let basePrice = 2.49;
 let glazingPrice = 0;
 let packPrice = 1;
 
-//Updating price 
+// Updating price 
 function updatePrice() {
   console.log("in price update");
 
@@ -18,7 +18,7 @@ function updatePrice() {
   console.log("total =" ,total);
 }
 
-//Glazing dropdown
+// Glazing dropdown
 let select = document.getElementById("glazingOptions");
 
 let glazeOp1 = document.createElement("option");
@@ -37,7 +37,7 @@ let glazeOp4 = document.createElement("option");
 glazeOp4.innerHTML = "Double chocolate";
 select.appendChild(glazeOp4);
 
-//Changing glaze
+// Changing glaze
 let glazeOpObj1 = {glazingOptions: "Keep original", priceAdapt: 0.00};
 let glazeOpObj2 = {glazingOptions: "Sugar milk", priceAdapt: 0.00};
 let glazeOpObj3 = {glazingOptions: "Vanilla milk", priceAdapt: 0.50};
@@ -60,7 +60,7 @@ function glazingChange(element) {
   updatePrice();
 }
 
-//Price dropdown
+// Price dropdown
 let price = document.querySelector(".packDropDown");
 console.log(price);
 let packSize1 = document.createElement("option");
@@ -79,7 +79,7 @@ let packSize4 = document.createElement("option");
 packSize4.innerHTML = "12";
 price.appendChild(packSize4);
 
-//Changing price
+// Changing price
 let packSizeObj1 = {size: "1", priceAdap: 1};
 let packSizeObj2 = {size: "6", priceAdap: 5};
 let packSizeObj3 = {size: "3", priceAdap: 3};
@@ -108,7 +108,7 @@ function packChange(element) {
 
 /* HW 4 start */
 
-// empty cart array
+// Empty cart array
 let cart = [];
 
 // Parse the URL parameter and store the current roll type as a variable.
@@ -116,6 +116,8 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
 
+
+// Changing element based on selection
 const rollBasePrice = rolls[rollType].basePrice;
 const rollImagePath = "assets/" + rolls[rollType].imageFile;
 const rollName = rollType + " cinnamon roll";
@@ -140,6 +142,8 @@ class Roll {
   }
 }
 
+
+// Adding selection to cart
 function addToCart() {
   let glazingDropDown = document.querySelector("#glazingOptions");
   console.log(glazingDropDown);
