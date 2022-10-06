@@ -21,7 +21,7 @@ class Roll {
     }
   }
 
-
+//creating new set and adding new objects
 const shopCart = new Set();
 
 let rollOne = new Roll("Original", "Sugar Milk", 1, 2.49);
@@ -37,12 +37,13 @@ shopCart.add(rollFour);
 
 console.log(shopCart);
 
+//calculating price of each roll
 function calculatedPrice(basePrice, glazingPrice, packPrice) {
     return (basePrice+glazingPrice)*packPrice;
 }
 
 
-//for (let i =0; i<shopCart.length; i++) {
+//displaying cart items
 function updating(){
     for(let shopObj of shopCart){
         let cartItem = document.getElementsByTagName("template")[0];
@@ -73,7 +74,7 @@ function updating(){
     }
 }
 
-
+//calculating final total
 function calcTot() {
     let totalPrice = 0;
     for(let shopObj of shopCart){
