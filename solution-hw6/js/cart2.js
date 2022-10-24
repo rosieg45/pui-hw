@@ -1,4 +1,3 @@
-console.log("fdsfsd");
 let sizeToPriceAdapt = {
     1:1,
     3:3,
