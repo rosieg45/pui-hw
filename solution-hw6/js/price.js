@@ -35,7 +35,7 @@ glazeOp3.innerHTML = "Vanilla milk";
 select.appendChild(glazeOp3);
 
 let glazeOp4 = document.createElement("option");
-glazeOp4.innerHTML = "Double chocolate";
+glazeOp4.innerHTML = "Double Chocolate";
 select.appendChild(glazeOp4);
 
 // Changing glaze
@@ -108,7 +108,9 @@ function packChange(element) {
 
 
 
-let cart = Array.from(JSON.parse(localStorage.getItem('cart')));
+let cart = [];
+let cartData = localStorage.getItem('cart');
+if(cartData) cart = Array.from(JSON.parse(cartData));
 console.log(cart);
 
 
