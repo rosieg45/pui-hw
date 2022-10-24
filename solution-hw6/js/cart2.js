@@ -8,7 +8,7 @@ let sizeToPriceAdapt = {
 let glazingToPrice = {
     "Keep original": 0,
     "Sugar Milk": 0,
-    "Vanilla Milk": 0.5,
+    "Vanilla milk": 0.5,
     "Double Chocolate": 1.50
 }
 
