@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Sans-Serif;
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 20px;
+}
+
+#pgHeading {
+    margin-top: 50px;
+}
+
+#belowHeader {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#taxonomy {
+    font-size: 22px;
+}
+
+#cereals {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFCB54;
+    color: black;
+}
+
+.navbarLinks {
+    height: 100%;
+}
+
+.toggleButton {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbarLinks ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarLinks li {
+    list-style: none;
+}
+
+.navbarLinks li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navbarLinks li:hover {
+    background-color:#FFF8E0;
+}
+
+.toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggleButton {
+        display: flex;
+    }
+
+    .navbarLinks {
+        display: none;
+        width: 100%;
+    }
+
+    .navbarLinks ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbarLinks ul li {
+        text-align: center;
+    }
+
+    .navbarLinks ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbarLinks.active {
+        display: flex;
+        width: 100%;
+
+    }
+
+}
+
+/* nav {
+    display: inline;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+} */
+
+#logo {
+    text-align: left;
+    margin: .5rem;
+    /* padding: 40px 0 40px 0; */
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    display: inline;
+    cursor: pointer;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/* all page */
+span {
+    font-size: 20px;
+}
+
+#elmt {
+    font-size: 20px;
+}
+
+#footer {
+    margin-bottom: 150px;
+}
+
+#cerealCards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+}
+
+@media (min-width: 750px) {
+    #cerealCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.cerealRow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin-right: 100px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.cerealRow:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-size: 20px;
+}
+
+.cerealName {
+    margin-top: 2px;
+}
+
+#topVariety {
+    margin-top: 30px;
+}
+
+.varietyContainer {
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    height: 400px;
+}
+
+/* info page */
+#infoImages {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 393px;
+    grid-row-gap: 20px;
+}
+
+#cerealPics {
+    margin-left: 20px;
+}
+
+#cerealPics:hover {
+    animation: shake 0.5s;
+  
+    animation-iteration-count: infinite;
+}
+  
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#desC {
+    margin-left: 20px; 
+    margin-top: 40px;
+}
+
+#ingreC {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#whereC {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#desText {
+    margin-top: -10px;
+}
+
+#inCereal {
+    margin-top: -10px;
+}
+
+#buy {
+    margin-top: -10px;
+}
+
+/* taxonomy tree page */
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+    cursor: pointer;
+}
+
+.node text {
+    font: 20px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+#about {
+    margin-left:  20px;
+    margin-top: 50px;
+}
+
+#tax {
+    margin-left:  20px;
+    margin-top: 60px;
+}
